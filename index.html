@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focusTimer</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="src/script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button id="toggle-mode">
+            <span class="sr-only"></span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <div id="timer-wrapper">
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+            <section id="controls" class="flex">
+                <button data-action="toggleRunning" class="ph ph-play-circle">
+                    <span class="sr-only">Play contador</span>
+                </button>
+                <button data-action="reset" class="ph ph-stop-circle">
+                    <span class="sr-only">Parar contador</span>
+                </button>
+                <button data-action="addMinutes" class="ph ph-plus-circle secondary">
+                    <span class="sr-only">Adicionar 5 minutos</span>
+                </button>
+                <button data-action="removeMinutes" class="ph ph-minus-circle">
+                    <span class="sr-only">Remover 5 minutos</span>
+                </button>
+            </section>
+        </div>
+
+
+        <div id="sounds-wrapper">
+            <section id="sounds">
+                <button data-action="forest" id="forest">
+                    <img src="./assets/forest.svg" alt="">
+                </button>
+    
+                <button data-action="coffee" id="coffee">
+                    <img src="./assets/coffe.svg" alt="">
+                </button>
+            </section>
+
+            <section id="sounds">
+                <button data-action="rain" id="rain">
+                    <img src="./assets/rain.svg" alt="">
+                </button>
+    
+                <button data-action="fire" id="fire">
+                    <img src="./assets/fire.svg" alt="">
+                </button>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
